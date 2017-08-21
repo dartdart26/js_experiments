@@ -99,6 +99,9 @@ function stop() {
 function increaseSpeed() {
     if(intervalMs > intervalStepMs)
         intervalMs -= intervalStepMs;
+    else if(intervalMs > 1)
+        intervalMs -= 1;
+
     stop();
     start();
 }
